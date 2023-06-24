@@ -99,7 +99,7 @@ resource "aws_instance" "ec2_instance" {
   key_name               = "Jesmmet"
 
   tags = {
-    Name = "sonar-scanner"
+    Name = "sonarqube_server"
   }
 }
 

@@ -3,7 +3,7 @@
   <head>
     <title>Welcome to my web page</title>
   </head>
-  <body bgcolor="#7FFF00">
+  <body background-color="#7FFF00">
     <h1>Hello Anthony ITquickFix did it!!</h1>
     <!--Form declaration. Must have an action attribute -->
         <form action="C:/JonnyJava/FirstJava.html/profile.html" method="post">

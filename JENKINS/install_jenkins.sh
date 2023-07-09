@@ -32,6 +32,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo usermod -aG docker jenkins
 sudo usermod -aG docker ubuntu
 sudo usermod -aG docker $USER
+sudo reboot
 sudo apt update
 sudo apt install terraform -y
 echo 'clearing screen...' && sleep 5

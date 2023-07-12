@@ -21,6 +21,18 @@ gpg --no-default-keyring \
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
     https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
     sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update -y
+sudo apt install terraform -y
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-key fingerprint 0EBFCD88
+sudo apt-get update -y
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y 
+sudo usermod -aG docker jenkins
+sudo usermod -aG docker ubuntu
+sudo usermod -aG docker $USER
+sudo reboot
 sudo apt update
 sudo apt install terraform -y
 echo 'clearing screen...' && sleep 5
